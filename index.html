@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html >
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Light House Tattoo APP</title>
+    
+    <!--[if lt IE 9]-->
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!--[endif]-->
+    <script type="text/javascript" src="js.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.css">
+  <!-- Include the jQuery library -->
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!-- Include the jQuery Mobile library -->
+  <script src="http://code.jquery.com/mobile/1.4.4/jquery.mobile-1.4.4.min.js"></script>
+    
+    <script type="text/javascript">
+    $(document).bind('mobileinit',function(){
+      $.mobile.selectmenu.prototype.options.nativeMenu = false;
+    });
+  </script>
+	
+    <script src="http://debug-software.intel.com/target/target-script-min.js#Ry9mkHtYO1RtOaPnsJlbNv92D5bzXZ33_vI4VSqcHCw"></script>
+
+<link rel="stylesheet" href="estilos.css">
+  </head>
+
+
+<body>
+
+<div id="contenedor" >
+
+     <div data-role="page" id="login"> 
+      <!-- COMIENZO PAGINA INGRESO LOGIN -->
+    <div data-role="header">
+    <h1><span>Light House Tattoo - App Ingreso</span></h1>
+      <div class="imgwrapper">
+        <img src="img/logo.png" />
+      </div>
+    </div>
+    <div data-role="content"> 
+      <form id="formulario">
+        <label> Usuario </label>
+        <input type="text" id="nombredeusuario" name="nombredeusuario" placeholder="Usuario">
+        <label> Password </label>
+        <input type="password" id="clave" name="clave" placeholder="Contrase&ntilde;a">
+         
+        <input type="submit" value="ENTRAR" id="botonLogin">
+      </form> 
+
+
+    </div>
+  </div> <!-- FIN PAGINA DE INGRESO MEDIANTE FORMULARIO -->
+
+
+  
+
+	<!--PAGINA 1 INICIO-->
+    <div data-role="page" id="pageone" class="ui-content">
+      <div data-role="header">
+        <h1>Light House Tattoo</h1>
+      </div>
+    
+      <div data-role="main" >
+        <div id="imgPortada">
+        </div>
+       
+        <div id="menuPrinc">
+            <ul>
+                <a href="#pagethree" data-transition="slide"><li>NUEVO TATTOO</li></a>
+                <li><a href="#employeeListPage" data-transition="slide">GALERIA</a></li>
+            </ul>
+        </div>
+            
+      </div>
+    
+     
+    </div> 
+    
+    
+    <!-- PAGINA 3 NUEVO TATTOO -->
+    <div data-role="page" id="pagethree"  class="ui-content">
+      <div data-role="header">
+        <h1>Selecciona tu estilo</h1>
+      </div>
+    
+      <div data-role="main">
+          
+            <ul id="estilos">
+                <a href="#pagefour" data-transition="slide"><li>TRADICIONAL</li></a>
+                <a href="#pagefour" data-transition="slide"><li>PIN UP</li></a>
+                <a href="#pagefour" data-transition="slide"><li>OLD SCHOOL</li></a>
+                <a href="#pagefour" data-transition="slide"><li>JAPONES</li></a>
+                <a href="#pagefour" data-transition="slide"><li>NEW SCHOOL</li></a>
+                <a href="#pagefour" data-transition="slide"><li>TRIBAL</li></a>
+            </ul>
+
+        </br>
+        <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Volver</button></a>
+      </div>
+      
+    </div> 
+    
+    
+    <!-- PAGINA 4 IDEA -->
+    <div data-role="page" id="pagefour"  class="ui-content">
+      <div data-role="header">
+        <h1>Contanos tu idea</h1>
+      </div>
+    
+      <div data-role="main">
+      <h3 class="titulos">Contanos que quer&eacute;s expresar en tu piel</h3>
+      <p>Cualquier significado, analog&iacute;a o preferencia que agregues a tu idea, nos va serivr para            lograr que tu diseño realmente cuente su historia.</p>
+       
+        <form>
+        <textarea id="significado" type="textarea" required> </textarea>       
+        </form>
+
+        </br>
+        <a href="#pagefive" data-transition="slide" class="botones"><button>Siguiente</button></a>
+        <a href="#pagethree" data-transition="slide" data-direction="reverse"><button>Volver</button></a>
+      </div>
+      
+    </div>  
+    
+    
+    
+    <!-- PAGINA 5 foto boceto -->
+    <div data-role="page" id="pagefive" class="ui-content">
+      <div data-role="header">
+        <h1>Mostranos tu borrador</h1>
+      </div>
+    
+      <div data-role="main">
+
+        <a href="#pageseven" data-transition="slide"><p>Galer&iacute;a</p></a>
+        
+        <button onclick="capturePhoto()"  >[Tomar foto]</button>
+       
+        
+        </br>
+
+        <a href="#pagesix" data-transition="slide"><button>Siguiente</button></a>
+        <a href="#pagefour" data-transition="slide" data-direction="reverse"><button>Volver</button></a>
+       
+      </div>
+    </div>
+    
+<!-- PAGINA LISTA DISEÑOS -->
+<div id="employeeListPage" data-role="page" class="ui-content" >
+
+  <div data-role="header" data-position="fixed">
+    <h1>Tattoo Directory</h1>
+  </div>
+
+  <div data-role="content">
+         <ul id="employeeList" data-role="listview" data-filter="true"></ul>
+    </div>   
+
+<a href="#pageone" data-transition="slide" data-direction="reverse"><button>Volver</button></a>
+</div>
+ 
+	
+    
+    <!-- PAGINA 6 LISTO BOCETO -->
+    <div data-role="page" id="pagesix" class="ui-content">
+      <div data-role="header">
+        <h1>Tu idea se envi&oacute; correctamente</h1>
+      </div>
+    
+      <div data-role="main">
+        
+        <p>
+        Tu tatuaje fue enviado a nuestros artistas vinculados a tu estilo para que comienzen a diseñar tu idea. 
+        </p>  
+        
+        <p id="gracias">Muchas gracias!</p>
+        <p>En cuanto tus diseños estén listos te llegar&aacute; una notificaci&oacute;n</p>
+        </br>
+        
+        
+        <a href="#pageseven" data-transition="slide" ><button>Ver galer&iacute;a custom</button></a>
+        <a href="#pageone"><button>Salir</button></a>
+
+      </div>
+      
+       
+    
+    </div> 
+    
+    
+    <!-- PAGINA 7 GALERIA CUSTOM -->
+    <div data-role="page" id="pageseven" class="ui-content">
+      <div data-role="header">
+        <h1>Tattoos Custom</h1>
+      </div>
+    
+      <div data-role="main">
+      
+        <div id="galeriacustom"> 
+          <div>
+          <a href="#pageeight" data-transition="slide" ><img src="img/tattoo1app.jpg"></a>
+          </div>
+
+          <div>
+          <a href="#pageeight" data-transition="slide" ><img src="img/tattoo1app.jpg"></a>
+          </div>
+
+          <div>
+          <a href="#pageeight" data-transition="slide" ><img src="img/tattoo1app.jpg"></a>
+          </div>
+
+          <div>
+          <a href="#pageeight" data-transition="slide" ><img src="img/tattoo1app.jpg"></a>
+          </div>
+
+          <div>
+          <a href="#pageeight" data-transition="slide" ><img src="img/tattoo1app.jpg"></a>
+          </div>
+
+          <div>
+          <a href="#pageeight" data-transition="slide" ><img src="img/tattoo1app.jpg"></a>
+          </div>
+        </div> 
+
+        <a href="#pageone" data-transition="slide" data-direction="reverse"><button>Volver</button></a>
+      </div>
+    	 
+    </div> 
+    
+     <!-- PAGINA 8 TATTOO SELECTED -->
+    <div data-role="page" id="pageeight" class="ui-content">
+      <div data-role="header">
+        <h1>NOMBRE PERSONA</h1>
+      </div>
+    
+      <div data-role="main" id="tattoobig">     
+        <img src="img/tattoo1appbig.jpg">
+        <p>Tatuaje realizado por $nombre artista para $nombre persona</p>
+        <p>A partir de la idea de Lucas se representa con este diseño el significado de un viaje muy particular y su historia.</p>
+        <a href="#pageseven" data-transition="slide" data-direction="reverse"><button>Volver</button></a>
+      </div>
+   	  
+  </div>  
+    <script>
+   
+  $('#formulario').submit(function() {
+  // recolecta los valores que inserto el usuario
+  var datosUsuario = $("#nombredeusuario").val()
+  var datosPassword = $("#clave").val()
+  archivoValidacion = "http://localhost/sitioTATTOObootstrap/apptattoo/validacion_de_datos.php?jsoncallback=?"
+   
+  $.getJSON( archivoValidacion, { usuario:datosUsuario, password:datosPassword})
+  .done(function(respuestaServer) {
+
+  if(respuestaServer.validacion == "ok"){
+  /// si la validacion es correcta, muestra la pantalla "home"
+        $.mobile.changePage("#pageone")  
+    }else{
+  /// ejecutar una conducta cuando la validacion falla
+      alert(respuestaServer.mensaje + "\nGenerado en: " + respuestaServer.hora + "\n" +respuestaServer.generador)
+  }
+  })
+  return false;
+  })
+
+    </script>
+</div><!--fin contenedor-->    
+<script src="js/jquery.js"></script>
+<script src="js/jquery.mobile-1.0rc1.min.js"></script>
+<script src="js/employeelist.js"></script>
+<script src="js/employeedetails.js"></script>
+<script src="js/reportlist.js"></script>
+</body>

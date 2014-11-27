@@ -1,0 +1,144 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	text-shadow:none;
+    -webkit-user-select:none;
+	text-align: center;	
+}
+
+#contenedor{
+	margin:0 auto;	
+	width: 100%;
+}
+
+#pageone, #pagetwo,#employeeListPage, #pagethree, #pagefour, #pagefive, #pagesix, #pageseven, #pageeight{
+	margin:0 auto;
+	/*text-align:center;*/
+	
+}
+
+#footer{
+	margin: 0 auto;	
+}
+
+.ui-content{
+	background: url("img/black_background.jpg") repeat;
+	color: #d0d0d0;
+	text-align:center;
+	text-shadow:none;
+    width: 100%;
+}
+
+#gracias{
+text-align: center;
+font-weight: bold;
+margin: 0;
+}
+
+a{
+text-decoration:none;
+color: #d0d0d0;	
+}
+
+ul{
+list-style-type:none;
+padding:0;
+}
+
+form label{
+text-shadow: none;
+color: #d0d0d0;
+}
+
+ul li{
+margin-bottom: 15px;
+}
+
+p{
+color: #d0d0d0;	
+font-size: 1em;
+text-align: left;
+}
+
+#tattoobig{
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#tattoobig img{
+	width: 100%;
+}
+
+.ui-page-theme-a a{
+	color: #d0d0d0;
+}
+
+.ui-page-theme-a a:visited{
+	color: #d0d0d0;
+}
+
+#galeriacustom{
+	overflow: hidden;
+	
+}
+
+#galeriacustom div{
+	float: left;
+	margin: 5px;
+}
+
+#imgPortada{
+background-image:url(img/logo.png);
+background-repeat:no-repeat;
+width:100%;
+height:180px;
+margin:0 auto;	
+background-position:center;	
+}
+
+
+#menuPrinc ul li {
+padding: 15px 0 15px 0; 
+width: 100%;
+background: url("img/black_scales.png") repeat;	
+}
+
+#tomarfoto{
+background: url("img/black_scales.png") repeat;
+text-shadow: none;
+color: #d0d0d0;
+border: none;
+}
+
+#menuPrinc ul li {
+width: 100%;
+}
+
+#estilos li{
+padding: 10px;
+background: url("img/black_scales.png") repeat;	
+}
+
+.titulos{
+text-align: left;
+font-size: 1.2em;
+margin: 0;
+}
+
+#significado{
+	margin:0 auto;
+	width: 97%;
+	height: 100px;
+	background: url("img/black_scales.png") repeat;
+	color: #d0d0d0;
+}
+
+#botonLogin{
+	background-color: red;
+}
+
+#botones{
+
+}
